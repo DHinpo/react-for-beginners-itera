@@ -1,21 +1,17 @@
 import React from 'react';
-import './App.css';
+import './App.css';     // підключаємо стилі
+import { Footer } from './Footer';
+import { Resume } from './basic';
 
-type FooterProps = {
-  copyright: string;
-}
+const user = { userName: 'Gupalo Vasyl' }
 
-const Footer: React.FC<FooterProps> = (props) => (
-  <footer>it`s a footer {props.copyright} </footer>
-)
-
-// пишемо, що Footer це React-функціональний компонент,
-// який приймає в якості аргумента тип FooterProps
 const App = () => (
   <div className="App">
-    <h1>Hello world</h1>
+    <h1>{user.userName}</h1>
+    <Resume basic="Congratulations, this is Gupalo Vasyl!
+Let's hold on!"/>
     <Footer copyright='C' />
   </div>
 )
 
-export default App;
+export default App;  //   доступніть коду з іншого місця
